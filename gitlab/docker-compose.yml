@@ -1,0 +1,23 @@
+# x-varの中身がserverという名前で参照できる。x-var自体はyamlから無視される
+x-var: &server
+  "gitlab.example.com"
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    restart: always
+    hostname: gitlab-private
+    container_name: gitlab-private
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url "http://gitlab.example.com"
+        registry_external_url "http://gitlab.example.com:4567"
+    ports:
+      - '80:80'
+      - '8022:22'
+      - '4567:4567'
+    volumes:
+      - './gitlab/config:/etc/gitlab'
+      - './gitlab/logs:/var/log/gitlab'
+      - './gitlab/data:/var/opt/gitlab'
+      - './gitlab/registry:/var/opt/gitlab/gitlab-rails/shared/registry'
