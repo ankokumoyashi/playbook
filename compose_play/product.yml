@@ -1,0 +1,6 @@
+services:
+  echo1:
+    environment:
+        - HOGE="FUGA"
+      
+

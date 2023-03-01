@@ -1,0 +1,11 @@
+version: "3"
+services:
+  polars:
+    build: .
+    container_name: polars
+    working_dir: /work
+    tty: true
+    volumes:
+      - type: bind
+        source: ./work
+        target: /work

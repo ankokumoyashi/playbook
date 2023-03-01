@@ -1,0 +1,15 @@
+version: "3"
+services:
+  echo1:
+    image: tatsushid/tinycore
+    environment:
+        - HOGE="HOGE"
+    command: echo "$HOGE"
+    depends_on: [echo2]
+  echo2:
+    image: python:3.8.2-buster
+    command: echo "2"
+    depends_on: [echo3]
+  echo3:
+    image: python:3.8.2-buster
+    command: echo "3"

@@ -1,0 +1,31 @@
+4 3
+a
+b
+c
+d
+a_b_c_d__e_f_g_h
+a_b_c_d__e_f_g_h
+a_b_c_d__e_f_g_h
+
+2 12
+choku
+daiko
+choku_daiko
+choku__daiko
+choku___daiko
+choku____daiko
+choku_____daiko
+choku______daiko
+_daiko_____choku
+daiko_____choku
+daiko____choku
+daiko___choku
+daiko__choku
+daiko_choku
+
+1 1
+chokudai
+a
+
+1 0
+aa
