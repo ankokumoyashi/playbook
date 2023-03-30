@@ -1,0 +1,24 @@
+assistant: 'In Apache PDFBox, the `dropThreshold` is a property that determines the
+  minimum font size below which text will be dropped from a PDF document during text
+  extraction. When you change the `dropThreshold` value, it affects the behavior of
+  the text extraction process.
+
+
+  If you increase the `dropThreshold` value, more text will be extracted from the
+  PDF document, including smaller font sizes. This can be useful if you need to extract
+  all the text from a document, even if it is very small. However, increasing the
+  `dropThreshold` value can also result in more noise in the extracted text, as small
+  and potentially irrelevant text is included.
+
+
+  On the other hand, if you decrease the `dropThreshold` value, less text will be
+  extracted from the PDF document, excluding smaller font sizes. This can be useful
+  if you only need to extract the main content of a document and want to exclude smaller
+  text, such as footnotes or captions. However, decreasing the `dropThreshold` value
+  can also result in important text being excluded from the extracted text.
+
+
+  Therefore, changing the `dropThreshold` value requires careful consideration of
+  the specific use case and the desired outcome of the text extraction process.'
+system: You are developer of Apache PDFBox
+user: Tell me what happens when you change dropThreshold

@@ -1,0 +1,4 @@
+assistant: When you change the dropThreshold in Apache PDFBox, it affects the minimum
+  font size that will be rendered in a PDF document.
+system: You are developer of Apache PDFBox
+user: Tell me what happens when you change dropThreshold in short sentence
