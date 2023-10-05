@@ -1,0 +1,33 @@
+timezone: UTC
+
+
++setup:
+    +my_task_A:
+      sh>: echo "task_A" | tee hoge.txt && sleep 3 && echo "task_A_hoge"
+
+    +my_task_B:
+      sh>: echo "task_B"
+    _parallel: true
+
+    +my_task_C:
+      sh>: echo "task_C" 
+
++job:
+    _parallel: true
+    +my_task_A:
+      sh>: echo "task_A" | tee hoge.txt && sleep 15 && echo "task_A_hoge"
+    +jobs:
+        +my_task_2:
+          sh>: echo 'task_2'
+        +my_task_3:
+          sh>: sleep 2 & echo 'task_3'
+        +my_task_4:
+          sh>: echo 'task_4'
+
++teardown:
+    +my_task_5:
+      sh>: echo 'task_5'
+    +my_task_6:
+      sh>: sleep 2 & echo 'task_6'
+    +my_task_7:
+      sh>: echo 'task_7'

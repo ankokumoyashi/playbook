@@ -1,0 +1,14 @@
+input_csv: "inputs/input.csv"
+template:
+  - role: "system"
+    message: "あなたはFAQを作成する秘書です。"
+  - role: "user"
+    message: "以下の文章からFAQを作成してください\n{input1}"
+  - role: "assistant"
+    message: "hoge\n__RETURN__hoge"
+    process: 'grep Q {}'
+  - role: "user"
+    message: "中国語に翻訳してください"
+  - role: "assistant"
+    message: "__RETURN__"
+    process: 'grep A {}'

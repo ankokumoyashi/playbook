@@ -1,0 +1,11 @@
+version: "3"
+services:
+  hydra:
+    image: hydra:latest
+    container_name: hydra
+    working_dir: /work
+    tty: true
+    volumes:
+      - type: bind
+        source: ./work
+        target: /work
